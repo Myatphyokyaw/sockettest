@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .subContainer {
+            width: 700px;
+            border: 1px solid rebeccapurple;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .headerContainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .chatContainer{
+            height: 600px;
+        }
+
+        .Input{
+            margin-bottom: 10px;
+        }
+
+    </style>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="subContainer">
+        <div class="headerContainer">
+            <h1>Chatting app</h1>
+        </div>
+        <div class="chatContainer">
+
+        </div>
+        <div>
+            <div style="display: flex;flex-direction: column">
+                <input placeholder="Name" class="Input" type="text">
+                <input placeholder="Something say..." class="Input" type="text">
+            </div>
+
+            <button>Send</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let socket = io("http://localhost:3000/")
+</script>
+</body>
+</html>
